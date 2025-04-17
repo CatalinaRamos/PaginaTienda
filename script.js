@@ -1,13 +1,28 @@
+document.querySelector('.hero-button').addEventListener('click', function (e) {
+  e.preventDefault();
 
-  document.querySelector('.hero-button').addEventListener('click', function (e) {
-    e.preventDefault();
-    
-    // Ocultar la sección principal
-    document.getElementById('principal').style.display = 'none';
+  const info = document.getElementById('mas-info');
+  info.style.display = 'block';
+  document.querySelector('.hero-section').style.display = 'none';
+  
+  
 
-    // Mostrar la sección de información
-    const info = document.getElementById('mas-info');
-    info.style.display = 'block';
-    info.scrollIntoView({ behavior: 'smooth' });
+  info.scrollIntoView({ behavior: 'smooth' });
+});
+function mostrarSeccion(id) {
+  // Oculta todas las secciones
+  document.querySelectorAll('.seccion').forEach(seccion => {
+      seccion.classList.remove('activa');
   });
 
+  // Muestra la sección seleccionada
+  document.getElementById(id).classList.add('activa');
+
+  // Remueve la clase 'activo' de todos los enlaces
+  document.querySelectorAll('.menu ul li a').forEach(link => {
+      link.classList.remove('activo');
+  });
+
+  // Agrega la clase 'activo' al enlace seleccionado
+  document.querySelector(`.menu ul li a[href="#"][onclick="mostrarSeccion('${id}')"]`).classList.add('activo');
+}
