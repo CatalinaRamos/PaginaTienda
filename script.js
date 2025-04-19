@@ -1,28 +1,23 @@
 document.querySelector('.hero-button').addEventListener('click', function (e) {
   e.preventDefault();
-
-  const info = document.getElementById('mas-info');
-  info.style.display = 'block';
-  document.querySelector('.hero-section').style.display = 'none';
-  
-  
-
-  info.scrollIntoView({ behavior: 'smooth' });
+  document.body.classList.add('show-content');
+  document.getElementById('mas-info').scrollIntoView({ behavior: 'smooth' });
 });
+
 function mostrarSeccion(id) {
   // Oculta todas las secciones
   document.querySelectorAll('.seccion').forEach(seccion => {
-      seccion.classList.remove('activa');
+    seccion.classList.remove('activa');
   });
 
   // Muestra la sección seleccionada
-  document.getElementById(id).classList.add('activa');
+  const seccionActiva = document.getElementById(id);
+  if (seccionActiva) {
+    seccionActiva.classList.add('activa');
+  }
 
-  // Remueve la clase 'activo' de todos los enlaces
-  document.querySelectorAll('.menu ul li a').forEach(link => {
-      link.classList.remove('activo');
+  // Cambia la clase 'activo' en los links
+  document.querySelectorAll('.menu-link').forEach(link => {
+    link.classList.toggle('activo', link.getAttribute('data-id') === id);
   });
-
-  // Agrega la clase 'activo' al enlace seleccionado
-  document.querySelector(`.menu ul li a[href="#"][onclick="mostrarSeccion('${id}')"]`).classList.add('activo');
 }

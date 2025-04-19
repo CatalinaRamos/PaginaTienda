@@ -18,6 +18,7 @@
       font-style: normal;
       background-color: #1E2A38;
     }
+    
 
     h2 {
         color: var(--white);
@@ -88,7 +89,16 @@
       padding: 0 24px;
       border-bottom: 1px solid var(--very-light-pink);
       align-items: center;
+      position: static;
     }
+    body.show-content nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;         /* para que quede por encima de todo */
+  background-color: #1E2A38; /* o el color que quieras darle */
+}
 
     .menu {
       display: none;
@@ -236,7 +246,26 @@
         display: none;
       }
       
-      #mas-info {
-        display: block;
-      }
-      
+     
+      /* 1) Oculta todas las secciones de contenido por defecto */
+.main-Container,
+#gorros,
+#bufandas,
+#chalecos {
+  display: none;
+}
+
+/* 2) Con la clase .show-content en <body>: 
+   - muestra las secciones 
+   - oculta el header */
+body.show-content .main-Container,
+body.show-content #gorros,
+body.show-content #bufandas,
+body.show-content #chalecos {
+  display: block;
+}
+
+body.show-content .hero-section {
+  display: none;
+}
+
