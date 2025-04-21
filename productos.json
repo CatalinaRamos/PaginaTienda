@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ruana Blanca",
+    "precio": "$120,00",
+    "descripcion": "La lana más pura fue hilada durante mañanas frías y silenciosas, cuando la neblina aún abrazaba los campos. Nube Serena es ligereza, paz y claridad. Como una pausa cálida en medio del mundo moderno.",
+    "images": [
+      "FotosRuanas/Blanca(1).PNG",
+      "FotosRuanas/Blanca(2).PNG",
+      "FotosRuanas/Blanca(3).PNG",
+      "FotosRuanas/Blanca(4).PNG"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Ruana Café",
+    "precio": "$120,00",
+    "descripcion": "Cada hebra de esta ruana fue hilada a mano mientras se contaban historias que vienen de antes de que tú nacieras. Raíz Ancestral es una ofrenda a la tierra, al tiempo y a los saberes que no están en los libros.",
+    "images": [
+      "FotosRuanas/Café(1).PNG",
+      "FotosRuanas/Café(2).PNG",
+      "FotosRuanas/Café(3).PNG"
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Ruana Ebriada",
+    "precio": "$120,00",
+    "descripcion": "Hermosa ruana tejida a mano con hilos de lana de oveja.",
+    "images": [
+      "FotosRuanas/Ebriada(1).PNG",
+      "FotosRuanas/Ebriada(2).PNG",
+      "FotosRuanas/Ebriada(3).PNG"
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Ruana Gris",
+    "precio": "$120,00",
+    "descripcion": "Esta ruana nació en la cima, donde los colores se apagan y la calma reina. Bruma de Montaña lleva la memoria de los días nublados, donde lo único claro es el calor del hogar. ",
+    "images": [
+      "FotosRuanas/Gris(1).PNG",
+      "FotosRuanas/Gris(2).PNG",
+      "FotosRuanas/Gris(3).PNG",
+      "FotosRuanas/Gris(4).PNG"
+    ]
+  },
+  {"id": 5,
+    "nombre": "Ruana Morada",
+    "precio": "$120,00",
+    "descripcion": "Hermosa ruana tejida a mano con hilos de lana de oveja.",
+    "images": [
+      "FotosRuanas/Morada(1).PNG",
+      "FotosRuanas/Morada(2).PNG",
+      "FotosRuanas/Morada(3).PNG"
+    ]
+  },
+  {"id": 6,
+    "nombre": "Ruana Negra",
+    "precio": "$120,00",
+    "descripcion": "Forjada en los telares de una abuela campesina, bajo la luna llena de los Andes, Noche Andina recoge en su lana negra el misterio de las montañas y la elegancia eterna de lo simple. No es solo una ruana: es un escudo de calidez y poder.",
+    "images": [
+      "FotosRuanas/Negra(1).PNG",
+      "FotosRuanas/Negra(2).PNG",
+      "FotosRuanas/Negra(3).PNG",
+      "FotosRuanas/Negra(4).PNG"
+    ]
+  },
+  {"id": 7,
+    "nombre": "Ruana Tricolor",
+    "precio": "$120,00",
+    "descripcion": "Nacida de la fusión entre tradición y alegría, Arcoíris Andino fue tejida en jornadas de sol y canto, donde cada color representa un elemento sagrado: tierra, agua, fuego, viento, montaña, cielo, semilla, comunidad y espíritu. Cada hebra fue teñida con tintes naturales raíces, hojas, flores y barro, todo preparado con amor por artesanos que ven el telar como una extensión de su alma.",
+    "images": [
+      "FotosRuanas/Tri(1).PNG",
+      "FotosRuanas/Tri(2).PNG",
+      "FotosRuanas/Tri(3).PNG"
+    ]
+  }
+  
+]

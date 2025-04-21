@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalle de Producto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <main>
+    <div class="producto-detalle">
+        <h1 id="prod-name"></h1>
+
+    <!-- Zona de imágenes -->
+    <div id="gallery">
+      <img id="main-img" src="" alt="">
+      <div id="thumbnails"></div>
+    </div>
+
+    <p id="prod-price"></p>
+    
+    <div class="product-actions">
+        <label for="cantidad">Cantidad:</label>
+        <select id="cantidad">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button id="add-to-cart">Añadir al carrito</button>
+      </div>
+      <p>Detalles del producto</p>
+      <p id="prod-desc"></p>
+      
+    </div>
+  </main>
+
+  <script src="details.js"></script>
+</body>
+</html>
