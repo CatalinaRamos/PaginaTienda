@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Detalle de Producto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e1b2b;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .navbar-right {
+      list-style: none;
+    }
+  </style>
 </head>
+
 <body>
-  
   <main>
+
     <div class="producto-detalle">
-        <h1 id="prod-name"></h1>
 
-    <!-- Zona de imágenes -->
-    <div id="gallery">
-      <img id="main-img" src="" alt="">
-      <div id="thumbnails"></div>
-    </div>
+      <h1 id="prod-name"></h1>
 
-    <p id="prod-price"></p>
-    
-    <div class="product-actions">
+      <!-- Zona de imágenes -->
+      <div id="gallery">
+        <img id="main-img" src="" alt="">
+        <div id="thumbnails"></div>
+      </div>
+
+      <p id="prod-price"></p>
+
+      <div class="product-actions">
         <label for="cantidad">Cantidad:</label>
         <select id="cantidad">
           <option value="1">1</option>
@@ -31,12 +50,27 @@
         </select>
         <button id="add-to-cart">Añadir al carrito</button>
       </div>
+      <div class="navbar-right">
+
+        <li class="navbar-shopping-cart">
+          <figure class="acciones-producto">
+            <a href="carrito.html">
+              <img src="./icons/icon_shopping_cart.svg" alt="Agregar" />
+              <span>Ver carrito</span>
+            </a>
+          </figure>
+
+        </li>
+      </div>
       <p>Detalles del producto</p>
       <p id="prod-desc"></p>
-      
-    </div>
-  </main>
+      <header>
+        <a href="index.html" class="botonTienda">Volver a la tienda</a>
+      </header>
 
+    </div>
+
+  </main>
   <script src="details.js"></script>
 </body>
 </html>

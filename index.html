@@ -1,233 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial Página Accesible</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruanas Boyacenses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- 🏠 Menú de navegación accesible -->
-    <nav class="menu">
-      <img src="./icons/icon_menu.svg" alt="menu" class="menus">
-        <ul>
-          <li><a href="#" data-seccion="inicio">Ruanas</a></li>
-          <li><a href="#" data-seccion="servicios">Chalecos</a></li>
-          <li><a href="#" data-seccion="contacto">Guantes</a></li>
-          
-            
-        </ul>
-        <div class="navbar-right">
-            <ul>
-              
-              <li class="navbar-shopping-cart">
-                <img src="./icons/icon_shopping_cart.svg" alt="cart" />
-                <div>2</div>
-              </li>
-            </ul>
+  <!-- Menú de navegación que aparece arriba en la página -->
+  <nav class="menu">
+    <!-- Icono del menú -->
+    <img src="./icons/icon_menu.svg" alt="menu" class="menus">
+    <!-- Aquí están los botones para ir a las secciones: Ruanas, Chalecos y Guantes -->
+    <ul>
+      <li><a href="#" data-seccion="Ruanas">Ruanas</a></li>
+      <li><a href="#" data-seccion="Chalecos">Chalecos</a></li>
+      <li><a href="#" data-seccion="Guantes">Guantes</a></li>
+    </ul>
+    <!-- Carrito de compras que está a la derecha del menú -->
+    <div class="navbar-right">
+      <ul>
+        <li class="navbar-shopping-cart">
+          <!-- Cuando se da clic, lleva a la página del carrito -->
+          <a href="carrito.html">
+            <img src="./icons/icon_shopping_cart.svg" alt="cart" />
+            <div id="cart-count">0</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Sección de Ruanas -->
+    <section id="Ruanas" class="seccion activa">
+      <div class="cards-container">
+        <div class="product-card">
+          <img src="FotosRuanas/Blanca(1).PNG" alt="Producto 1" />
+          <div class="product-info">
+            <div>
+              <h3>COP $180.000</h3>
+              <p>Ruana Blanca</p>
+            </div>
+            <figure class="acciones-producto">
+              <a href="details.html?id=1">
+                <img src="./icons/AñadirCarrito.png" alt="Agregar" />
+                <span>Ver</span>
+              </a>
+            </figure>
           </div>
-    </nav>
+        </div>
 
-    
-    <main>
-
-        <!-- 🏡 Sección de Inicio -->
-        <section id="inicio" class="seccion activa">
-            <div class="cards-container">
-                <div class="product-card">
-                  <img src="FotosRuanas/Blanca(1).PNG" alt="Producto 1" />
-                  <div class="product-info">
-                    <div>
-                      <p>$120,00</p>
-                      <p>Ruana Blanca</p>
-                    </div>
-                    <figure class="acciones-producto">
-                      <a href="details.html?id=1">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                        <span>Ver</span>
-                      </a>
-                    </figure>
-                  </div>
-                </div>
-          
-                <div class="product-card">
-                  <img src="FotosRuanas/Café(1).PNG" alt="Producto 2" />
-                  <div class="product-info">
-                    <div>
-                      <p>$120,00</p>
-                      <p>Ruana Café</p>
-                    </div>
-                    <figure>
-                      <a href="details.html?id=2">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-                    </figure>
-                  </div>
-                </div>
-          
-                <div class="product-card">
-                  <img src="FotosRuanas/Ebriada(1).PNG" alt="Producto 3" />
-                  <div class="product-info">
-                    <div>
-                      <p>$120,00</p>
-                      <p>Ruana Ebriada</p>
-                    </div>
-                    <figure>
-                      <a href="details.html?id=3">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-                    </figure>
-                  </div>
-                </div>
-          
-                <div class="product-card">
-                  <img src="FotosRuanas/Gris(1).PNG" alt="Producto 4" />
-                  <div class="product-info">
-                    <div>
-                      <p>$120,00</p>
-                      <p>Ruana Gris</p>
-                    </div>
-                    <figure>
-                      <a href="details.html?id=4">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-                    </figure>
-                  </div>
-                </div>
-          
-                <div class="product-card">
-                  <img src="FotosRuanas/Morada(1).PNG" alt="Producto 5" />
-                  <div class="product-info">
-                    <div>
-                      <p>$120,00</p>
-                      <p>Ruana Morada</p>
-                    </div>
-                    <figure>
-                      <a href="details.html?id=5">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-                    </figure>
-                  </div>
-                </div>
-          
-                <div class="product-card">
-                  <img src="FotosRuanas/Negra(1).PNG" alt="Producto 6" />
-                  <div class="product-info">
-                    <div>
-                      <p>$120,00</p>
-                      <p>Ruana Negra</p>
-                    </div>
-                    <figure>
-                      <a href="details.html?id=6">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-                    </figure>
-                  </div>
-                </div>
-          
-                <div class="product-card">
-                  <img src="FotosRuanas/Tri(1).PNG" alt="Producto 7" />
-                  <div class="product-info">
-                    <div>
-                      <p>$120,00</p>
-                      <p>Ruana Tricolor</p>
-                    </div>
-                    <figure>
-                      <a href="details.html?id=7">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-                    </figure>
-                  </div>
-                </div>
-            
-        </section>
-
-        <!-- 💡 Sección de Chalecos -->
-        <section id="servicios" class="seccion">
-          <div class="chalecos-container">
-            <div class="Chaleco_Product">
-              <img src="FotosRuanas/Chaleco(1).png" alt="Producto 1" />
-              <div class="product-Chaleco">
-                <div>
-                  <p>$120,00</p>
-                  <p>Ruana Tricolor</p>
-                </div>
-                <figure>
-                  <a href="details.html?id=1">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-                </figure>
-              </div>
+        <div class="product-card">
+          <img src="FotosRuanas/Café(1).PNG" alt="Producto 2" />
+          <div class="product-info">
+            <div>
+              <h3>COP $140.000</h3>
+              <p>Ruana Café</p>
             </div>
-            <div class="Chaleco_Product">
-              <img src="FotosRuanas/Chaleco(2).png" alt="Producto 1" />
-              <div class="product-Chaleco">
-                <div>
-                  <p>$120,00</p>
-                  <p>Ruana Tricolor</p>
-                </div>
-                <figure>
-                  <a href="details.html?id=1">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-                </figure>
-              </div>
-            </div>
-            <div class="Chaleco_Product">
-              <img src="FotosRuanas/Chaleco(3).png" alt="Producto 1" />
-              <div class="product-Chaleco">
-                <div>
-                  <p>$120,00</p>
-                  <p>Ruana Tricolor</p>
-                </div>
-                <figure>
-                  <a href="details.html?id=1">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-                </figure>
-              </div>
-            </div>
-            <div class="Chaleco_Product">
-              <img src="FotosRuanas/Chaleco(4).png" alt="Producto 1" />
-              <div class="product-Chaleco">
-                <div>
-                  <p>$120,00</p>
-                  <p>Ruana Tricolor</p>
-                </div>
-                <figure>
-                  
-                  <a href="details.html?id=1">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-                </figure>
-              </div>
-            </div>
+            <figure class="acciones-producto">
+              <a href="details.html?id=2">
+                <img src="./icons/AñadirCarrito.png" alt="Agregar" />
+                <span>Ver</span>
+              </a>
+            </figure>
           </div>
-          
-        </section>
+        </div>
 
-        <!-- 📩 Sección de Contacto -->
-        <section id="contacto" class="seccion">
-          <div class="product-card">
-            <img src="FotosRuanas/Tri(1).PNG" alt="Producto 7" />
-            <div class="product-info">
-              <div>
-                <p>$120,00</p>
-                <p>Ruana Tricolor</p>
-              </div>
-              <figure>
-                <a href="details.html?id=1">
-                        <img src="./icons/AñadirCarrito.png" alt="Agregar" />
-                      </a>
-              </figure>
+        <div class="product-card">
+          <img src="FotosRuanas/Ebriada(1).PNG" alt="Producto 3" />
+          <div class="product-info">
+            <div>
+              <h3>COP $150.000</h3>
+              <p>Ruana Ebriada</p>
             </div>
+            <figure class="acciones-producto">
+              <a href="details.html?id=3">
+                <img src="./icons/AñadirCarrito.png" alt="Agregar" />
+                <span>Ver</span>
+              </a>
+            </figure>
           </div>
-        </section>
+        </div>
 
-    </main>
+        <div class="product-card">
+          <img src="FotosRuanas/Gris(1).PNG" alt="Producto 4" />
+          <div class="product-info">
+            <div>
+              <h3>COP $100.000</h3>
+              <p>Ruana Gris</p>
+            </div>
+            <figure class="acciones-producto">
+              <a href="details.html?id=4">
+                <img src="./icons/AñadirCarrito.png" alt="Agregar" />
+                <span>Ver</span>
+              </a>
+            </figure>
+          </div>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="product-card">
+          <img src="FotosRuanas/Morada(1).PNG" alt="Producto 5" />
+          <div class="product-info">
+            <div>
+              <h3>COP $210.000</h3>
+              <p>Ruana Morada</p>
+            </div>
+            <figure class="acciones-producto">
+              <a href="details.html?id=5">
+                <img src="./icons/AñadirCarrito.png" alt="Agregar" />
+                <span>Ver</span>
+              </a>
+            </figure>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="FotosRuanas/Negra(1).PNG" alt="Producto 6" />
+          <div class="product-info">
+            <div>
+              <h3>COP $320.000</h3>
+              <p>Ruana Negra</p>
+            </div>
+            <figure class="acciones-producto">
+              <a href="details.html?id=6">
+                <img src="./icons/AñadirCarrito.png" alt="Agregar" />
+                <span>Ver</span>
+              </a>
+            </figure>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="FotosRuanas/Tri(1).PNG" alt="Producto 7" />
+          <div class="product-info">
+            <div>
+              <h3>COP $420.000</h3>
+              <p>Ruana Tricolor</p>
+            </div>
+            <figure class="acciones-producto">
+              <a href="details.html?id=7">
+                <img src="./icons/AñadirCarrito.png" alt="Agregar" />
+                <span>Ver</span>
+              </a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Sección de Chalecos -->
+    <section id="Chalecos" class="seccion">
+
+      <div class="cards-container">
+        <div class="product-card">
+          <img src="FotosRuanas/Chaleco(1).png" alt="Producto 1" />
+          <div class="product-info">
+            <div>
+              <h3>COP $90.000</h3>
+              <p>Chalecos</p>
+            </div>
+            <figure class="acciones-producto">
+              <a href="details.html?id=8">
+                <img src="./icons/AñadirCarrito.png" alt="Agregar" />
+                <span>Ver</span>
+              </a>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--  Sección de Guantes -->
+    <section id="Guantes" class="seccion">
+      <div class="cards-container">
+        <div class="product-card">
+          <img src="FotosRuanas/Guantes.png" alt="Producto 1" />
+          <div class="product-info">
+            <div>
+              <h3>COP $30.000</h3>
+              <p>Guantes</p>
+            </div>
+            <figure class="acciones-producto">
+              <a href="details.html?id=9">
+                <img src="./icons/AñadirCarrito.png" alt="Agregar" />
+                <span>Ver</span>
+              </a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>

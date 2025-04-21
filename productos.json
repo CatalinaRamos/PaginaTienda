@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nombre": "Ruana Blanca",
-    "precio": "$120,00",
+    "precio": "$180.000",
     "descripcion": "La lana más pura fue hilada durante mañanas frías y silenciosas, cuando la neblina aún abrazaba los campos. Nube Serena es ligereza, paz y claridad. Como una pausa cálida en medio del mundo moderno.",
     "images": [
       "FotosRuanas/Blanca(1).PNG",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "nombre": "Ruana Café",
-    "precio": "$120,00",
+    "precio": "$140.000",
     "descripcion": "Cada hebra de esta ruana fue hilada a mano mientras se contaban historias que vienen de antes de que tú nacieras. Raíz Ancestral es una ofrenda a la tierra, al tiempo y a los saberes que no están en los libros.",
     "images": [
       "FotosRuanas/Café(1).PNG",
@@ -25,7 +25,7 @@
   {
     "id": 3,
     "nombre": "Ruana Ebriada",
-    "precio": "$120,00",
+    "precio": "$150.000",
     "descripcion": "Hermosa ruana tejida a mano con hilos de lana de oveja.",
     "images": [
       "FotosRuanas/Ebriada(1).PNG",
@@ -36,7 +36,7 @@
   {
     "id": 4,
     "nombre": "Ruana Gris",
-    "precio": "$120,00",
+    "precio": "$100.000",
     "descripcion": "Esta ruana nació en la cima, donde los colores se apagan y la calma reina. Bruma de Montaña lleva la memoria de los días nublados, donde lo único claro es el calor del hogar. ",
     "images": [
       "FotosRuanas/Gris(1).PNG",
@@ -45,19 +45,21 @@
       "FotosRuanas/Gris(4).PNG"
     ]
   },
-  {"id": 5,
+  {
+    "id": 5,
     "nombre": "Ruana Morada",
-    "precio": "$120,00",
-    "descripcion": "Hermosa ruana tejida a mano con hilos de lana de oveja.",
+    "precio": "$210.000",
+    "descripcion": "Nuestra ruana morada es una obra de arte tejida en lana 100% natural, con un tono profundo y elegante que resalta su diseño tradicional. Sus finos acabados en los bordes, con flecos cuidadosamente anudados a mano, le dan un toque distintivo y artesanal. El tejido muestra un sutil patrón en relieve que aporta textura y personalidad, mientras que su caída ligera y envolvente garantiza comodidad y abrigo. Ideal para quienes buscan una prenda auténtica con estilo y carácter, perfecta para lucir con orgullo lo hecho en Boyacá.",
     "images": [
       "FotosRuanas/Morada(1).PNG",
       "FotosRuanas/Morada(2).PNG",
       "FotosRuanas/Morada(3).PNG"
     ]
   },
-  {"id": 6,
+  {
+    "id": 6,
     "nombre": "Ruana Negra",
-    "precio": "$120,00",
+    "precio": "$320.000",
     "descripcion": "Forjada en los telares de una abuela campesina, bajo la luna llena de los Andes, Noche Andina recoge en su lana negra el misterio de las montañas y la elegancia eterna de lo simple. No es solo una ruana: es un escudo de calidez y poder.",
     "images": [
       "FotosRuanas/Negra(1).PNG",
@@ -66,14 +68,39 @@
       "FotosRuanas/Negra(4).PNG"
     ]
   },
-  {"id": 7,
+  {
+    "id": 7,
     "nombre": "Ruana Tricolor",
-    "precio": "$120,00",
+    "precio": "$420.000",
     "descripcion": "Nacida de la fusión entre tradición y alegría, Arcoíris Andino fue tejida en jornadas de sol y canto, donde cada color representa un elemento sagrado: tierra, agua, fuego, viento, montaña, cielo, semilla, comunidad y espíritu. Cada hebra fue teñida con tintes naturales raíces, hojas, flores y barro, todo preparado con amor por artesanos que ven el telar como una extensión de su alma.",
     "images": [
       "FotosRuanas/Tri(1).PNG",
       "FotosRuanas/Tri(2).PNG",
       "FotosRuanas/Tri(3).PNG"
+    ]
+  }
+  ,
+  {
+    "id": 8,
+    "nombre": "Chalecos",
+    "precio": "$90.000",
+    "descripcion": "Descubre la calidez y el estilo auténtico con nuestra colección de cuatro chalecos de lana, cada uno tejido con esmero para brindarte comodidad y elegancia en cada detalle. Desde tonos neutros que combinan con todo hasta diseños tradicionales que evocan la herencia boyacense, estos chalecos son el equilibrio perfecto entre lo artesanal y lo moderno. Ideales para los días fríos o para darle un toque único a tu look, cada prenda cuenta una historia de tradición, moda y amor por lo hecho a mano. ¡Lúcelos y lleva contigo el encanto de lo local!",
+    "images": [
+      "FotosRuanas/Chaleco(1).png",
+      "FotosRuanas/Chaleco(2).png",
+      "FotosRuanas/Chaleco(3).png",
+      "FotosRuanas/Chaleco(4).png"
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Guantes",
+    "precio": "$30.000",
+    "descripcion": "Nuestros guantes de lana en tonos rojo, blanco y café son una combinación perfecta de calidez, estilo y tradición. Están tejidos a mano con puntadas gruesas que les dan una textura esponjosa, similar a motitas de algodón, lo que los hace irresistiblemente suaves al tacto. El rojo vibrante aporta energía y alegría, mientras que el blanco equilibra con pureza y el café agrega ese toque cálido y natural, evocando paisajes andinos. Su diseño anatómico se ajusta cómodamente a las manos, brindando abrigo sin sacrificar la movilidad. Son ideales para días fríos y para quienes aman destacar con accesorios únicos, artesanales y llenos de personalidad. ¡Perfectos para llevar lo mejor de Boyacá en cada detalle!",
+    "images": [
+      "FotosRuanas/Guantes.png",
+      "FotosRuanas/Guantes(1).png",
+      "FotosRuanas/Guantes(2).png"
     ]
   }
   

@@ -1,11 +1,12 @@
-// Función para mostrar solo la sección seleccionada
+const menuIcon = document.querySelector('.menus');
+const menuList = document.querySelector('.menu ul');// Función para mostrar solo la sección seleccionada
 // Escucha clics y activa sección
 document.querySelectorAll('.menu ul li a').forEach(link => {
   link.addEventListener('click', function (e) {
-    e.preventDefault(); // Previene salto
+    e.preventDefault(); 
     const id = this.dataset.seccion;
     mostrarSeccion(id);
-    
+
     // Actualizar clases activas
     document.querySelectorAll('.menu ul li a').forEach(l => l.classList.remove('activo'));
     this.classList.add('activo');
@@ -24,13 +25,12 @@ function mostrarSeccion(id) {
 
 
 
-// Mostrar la sección de inicio por defecto
-document.addEventListener("DOMContentLoaded", function() {
-  mostrarSeccion('inicio');
+// Mostrar la sección de Ruanas por defecto
+document.addEventListener("DOMContentLoaded", function () {
+  mostrarSeccion('Ruanas');
 });
-// En script.js, al final:
-const menuIcon = document.querySelector('.menus');
-const menuList = document.querySelector('.menu ul');
+
+
 
 menuIcon.addEventListener('click', () => {
   menuList.classList.toggle('show');
@@ -53,3 +53,10 @@ function actualizarContador() {
 
 // Ejecutar al cargar cualquier página
 document.addEventListener("DOMContentLoaded", actualizarCarritoNavbar);
+// Redirigir al hacer clic en el carrito
+const carritoIcon = document.querySelector('.navbar-shopping-cart');
+if (carritoIcon) {
+  carritoIcon.addEventListener('click', () => {
+    window.location.href = 'carrito.html';
+  });
+}

@@ -1,8 +1,9 @@
-// Paso 1: Capturar el id desde la URL
+// Obtener el id del producto desde la URL
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
 
-// Paso 2: Cargar el JSON y buscar el producto
+
+// Cargar los datos del producto
 fetch('productos.json')
   .then(response => response.json())
   .then(data => {
@@ -17,7 +18,7 @@ fetch('productos.json')
     console.error('Error cargando el producto:', error);
   });
 
-// Paso 3: Renderizar el producto
+// Renderiza el producto en la página
 function renderProduct(prod) {
   document.getElementById('prod-name').textContent = prod.nombre;
   document.getElementById('prod-price').textContent = prod.precio;
@@ -39,65 +40,53 @@ function renderProduct(prod) {
     });
     thumbs.appendChild(img);
   });
-}
-document.addEventListener("DOMContentLoaded", () => {
-    const addButton = document.getElementById('add-to-cart');
-    addButton?.addEventListener('click', () => {
-      const cantidad = parseInt(document.getElementById('cantidad').value, 10);
-      const producto = {
-        id,
-        cantidad
-      };
-  
-      // Obtener carrito actual del localStorage
-      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-  
-      // Ver si ya existe ese producto en el carrito
-      const existente = carrito.find(p => p.id == producto.id);
-      if (existente) {
-        existente.cantidad += cantidad;
-      } else {
-        carrito.push(producto);
-      }
-  
-      localStorage.setItem('carrito', JSON.stringify(carrito));
-      actualizarCarritoNavbar();
-    });
-  });
-  // Escuchar clic en el botón "Añadir al carrito"
-document.getElementById('add-to-cart-btn').addEventListener('click', () => {
-    const quantity = parseInt(document.getElementById('quantity').value);
-    const currentCount = parseInt(localStorage.getItem('cartCount')) || 0;
-    const newCount = currentCount + quantity;
-  
-    localStorage.setItem('cartCount', newCount);
-    updateCartCount();
-  });
-  
-  // Actualiza visualmente el número del carrito
-  function updateCartCount() {
-    const count = localStorage.getItem('cartCount') || 0;
-    const cartCountElement = document.getElementById('cart-count');
-    if (cartCountElement) {
-      cartCountElement.textContent = count;
-    }
-  }
-  
-  // Al cargar la página, actualiza el número del carrito
-  document.addEventListener('DOMContentLoaded', updateCartCount);
-  
-  function agregarAlCarrito(producto) {
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  
-    const index = carrito.findIndex(p => p.id === producto.id);
-  
-    if (index >= 0) {
-      carrito[index].cantidad += 1;
+
+  // Agregar al carrito
+  document.getElementById('add-to-cart').addEventListener('click', () => {
+    const cantidad = parseInt(document.getElementById('cantidad').value, 10);
+    const productoCarrito = {
+      id: prod.id,
+      nombre: prod.nombre,
+      imagen: prod.images[0],
+      cantidad
+    };
+
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const existente = carrito.find(p => p.id == productoCarrito.id);
+
+    if (existente) {
+      existente.cantidad += cantidad;
     } else {
-      carrito.push({ ...producto, cantidad: 1 });
+      carrito.push(productoCarrito);
     }
-  
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    actualizarContador();
+
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarCarritoNavbar();
+  });
+}
+
+
+// Actualiza el contador del carrito en el navbar
+function actualizarCarritoNavbar() {
+  const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  const total = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+
+  const cartDiv = document.getElementById('cart-count');
+  if (cartDiv) {
+    cartDiv.textContent = total;
   }
-  
+}
+
+// Cuando se carga la página, actualiza el contador del carrito
+document.addEventListener('DOMContentLoaded', actualizarCarritoNavbar);
+
+
+// Ejecutar al cargar cualquier página
+document.addEventListener("DOMContentLoaded", actualizarCarritoNavbar);
+// Redirigir al hacer clic en el carrito
+const carritoIcon = document.querySelector('.navbar-shopping-cart');
+if (carritoIcon) {
+  carritoIcon.addEventListener('click', () => {
+    window.location.href = 'carrito.html';
+  });
+}
