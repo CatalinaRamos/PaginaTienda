@@ -167,6 +167,13 @@ body {
 }
 
 @media (max-width: 640px) {
+  .menu .menu-nav > ul {
+    display: none !important;
+  }
+  .menu .menu-nav > ul.show {
+    display: flex !important;
+    flex-direction: column;
+  }
 
   .menu .menus {
     display: block;
@@ -174,16 +181,7 @@ body {
     align-items: flex-start;
     position: relative;
   }
-
-  /* Oculto la lista por defecto */
-  .menu ul li {
-    display: none !important;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-    /* <- oculta siempre, excepto si tiene .show */
-  }
-
+ 
   .product-card {
     width: 140px;
   }
@@ -193,22 +191,12 @@ body {
     height: 140px;
   }
 
-  /* Cuando tenga .show se despliega en columna */
-  .menu ul.show {
-    display: flex !important;
-    flex-direction: column;
-    align-items: start;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-  }
-
   .navbar-right {
     display: flex;
     align-items: center;
     position: static;
   }
+  
 }
 
 /* Estilo de cada ítem desplegado */

@@ -1,5 +1,6 @@
 const menuIcon = document.querySelector('.menus');
 const menuList = document.querySelector('.menu ul');// Función para mostrar solo la sección seleccionada
+
 // Escucha clics y activa sección
 document.querySelectorAll('.menu ul li a').forEach(link => {
   link.addEventListener('click', function (e) {
@@ -53,6 +54,7 @@ function actualizarContador() {
 
 // Ejecutar al cargar cualquier página
 document.addEventListener("DOMContentLoaded", actualizarCarritoNavbar);
+
 // Redirigir al hacer clic en el carrito
 const carritoIcon = document.querySelector('.navbar-shopping-cart');
 if (carritoIcon) {

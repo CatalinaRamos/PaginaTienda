@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
 let productos = [];  // Variable global para los productos
 
 function cargarProductos() {
-  fetch('productos.json')  // Cambia la ruta si es necesario
+  fetch('productos.json')  // Productos
     .then(response => response.json())
     .then(data => {
       productos = data;  // Asignamos los productos cargados a la variable global
-      mostrarCarrito();  // Ahora podemos mostrar el carrito
-      mostrarPrecioTotal();  // Mostrar el precio total después de cargar los productos
+      mostrarCarrito();  // MOstramos el carrito
+      mostrarPrecioTotal();  // Mostramos el precio total después de cargar los productos
     })
     .catch(error => console.error("Error al cargar el archivo productos.json:", error));
 }
@@ -56,7 +56,7 @@ function actualizarCarritoNavbar() {
 
 document.getElementById("vaciar-carrito").addEventListener("click", function () {
   localStorage.removeItem("carrito");
-  location.reload(); // Recarga la página para actualizar vista
+  location.reload(); 
 });
 
 function mostrarPrecioTotal() {
@@ -66,7 +66,7 @@ function mostrarPrecioTotal() {
   carrito.forEach(item => {
     const producto = productos.find(p => p.id === item.id);
     if (producto) {
-      const precioString = producto.precio && typeof producto.precio === 'string' ? producto.precio : "$0.000";
+      const precioString = producto.precio && typeof producto.precio === 'string' ? producto.precio : "$0,00";
       const precioNumerico = parseFloat(precioString.replace("$", "").replace(",", "."));
       total += precioNumerico * item.cantidad;
     }

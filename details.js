@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', actualizarCarritoNavbar);
 
 // Ejecutar al cargar cualquier página
 document.addEventListener("DOMContentLoaded", actualizarCarritoNavbar);
+
 // Redirigir al hacer clic en el carrito
 const carritoIcon = document.querySelector('.navbar-shopping-cart');
 if (carritoIcon) {
